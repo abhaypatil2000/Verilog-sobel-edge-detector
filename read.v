@@ -71,6 +71,7 @@ module read#(parameter
             x1 = x1[7] ? -x1 : x1;
             x2 = x2[7] ? -x2 : x2;
             result = x1 +x2;           //result is storing the gray value of the sobel
+            result = result>>3; // divide by 8
             data_r = result;
             data_g = result;
             data_b = result;
